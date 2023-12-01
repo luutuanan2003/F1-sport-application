@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fadingEdgeLength="10dp"
+    android:orientation="vertical"
+    android:visibility="visible"
+    tools:context=".MainActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="#CEFFFFFF"
+        android:fadingEdge="horizontal|vertical"
+        android:fadingEdgeLength="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <Button
+            android:id="@+id/game_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="#00FFFFFF"
+            android:fontFamily="@font/titillium_web_light"
+            android:paddingBottom="5dp"
+            android:text="Home"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/game_stats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="44dp"
+            android:layout_marginBottom="20dp"
+            android:background="#00FFFFFF"
+            android:fontFamily="@font/titillium_web_light"
+            android:paddingBottom="5dp"
+            android:text="Stats"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/stats_game"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="65dp"
+            android:layout_marginBottom="26dp"
+            android:fontFamily="@font/titillium_web_bold"
+            android:paddingBottom="5dp"
+            android:text="Game"
+            android:textColor="#FF0000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/Timer_Container"
+            android:layout_width="350dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="420dp"
+            android:fadingEdge="horizontal|vertical"
+            android:fadingEdgeLength="10dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/Timer"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="80dp"
+                android:fontFamily="@font/titillium_web_bold"
+                android:gravity="center"
+                android:text="00:00:000"
+                android:textSize="48sp" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="239dp"
+                android:layout_height="56dp"
+                android:background="#00ECECEC"
+                android:fontFamily="@font/titillium_web_bold"
+                android:gravity="center"
+                android:paddingTop="5dp"
+                android:text="@string/outpace_f1_legends_clock_your_reaction_time_against_the_best"
+                android:textColor="#FF0000" />
+        </androidx.cardview.widget.CardView>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="150dp"
+            android:background="#F1F1F1"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/F1_Reaction"
+                android:layout_width="292dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="60dp"
+                android:layout_marginBottom="9dp"
+                android:background="#09375A"
+                android:fontFamily="@font/titillium_web_bold"
+                android:paddingStart="10dp"
+                android:paddingBottom="10dp"
+                android:text="@string/f1_reaction"
+                android:textColor="#FFFFFF"
+                android:textSize="48sp"
+                tools:ignore="RtlSymmetry" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="300dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/Drivers"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="1dp"
+                    app:srcCompat="@drawable/drivers" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="vertical"></LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/Start"
+                    android:layout_width="130dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/titillium_web_bold"
+                    android:text="@string/press_to_play"
+                    app:backgroundTint="#FF0000" />
+
+                <Button
+                    android:id="@+id/Stop"
+                    android:layout_width="151dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/titillium_web_bold"
+                    android:paddingBottom="5dp"
+                    android:shadowColor="#FFFFFF"
+                    android:text="GO"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    app:backgroundTint="#FF0000" />
+
+                <Button
+                    android:id="@+id/Reset"
+                    android:layout_width="130dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/titillium_web_bold"
+                    android:text="Reset"
+                    app:backgroundTint="#FF0000" />
+
+            </LinearLayout>
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="196dp"
+                android:layout_height="51dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/red"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:checked="false"
+                        android:padding="4dp"
+                        android:textAlignment="center"
+                        android:textSize="20sp"
+                        app:buttonTint="#F80000" />
+
+                    <RadioButton
+                        android:id="@+id/yellow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:checked="false"
+                        android:padding="4dp"
+                        android:textAlignment="center"
+                        android:textSize="20sp"
+                        app:buttonTint="#FFD600" />
+
+                    <RadioButton
+                        android:id="@+id/green"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:checked="false"
+                        android:padding="4dp"
+                        android:textAlignment="center"
+                        android:textSize="20sp"
+                        app:buttonTint="#00C853" />
+                </LinearLayout>
+            </RadioGroup>
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/car" />
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/logocontainer"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:background="#FF0000"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/constraintLayout">
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logo"
+            android:contentDescription="TODO" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

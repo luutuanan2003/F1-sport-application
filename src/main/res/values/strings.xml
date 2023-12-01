@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">assignment 1</string>
+    <string name="title_activity_main_screen">MainScreen</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="home">Home</string>
+    <string name="f1_reaction">F1 Reaction</string>
+    <string name="top_stories">Top Stories</string>
+    <string name="outpace_f1_legends_clock_your_reaction_time_against_the_best">Outpace F1 legends: clock your reaction time against the best!</string>
+    <string name="press_to_play">Press to Play</string>
+</resources>
